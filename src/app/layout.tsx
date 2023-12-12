@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="pt-AO" suppressHydrationWarning suppressContentEditableWarning>
-      <body className={`${inter.className} `}>{children}</body>
+      <body className={`${inter.className}`}>{children}</body>
     </html>
   );
 };
