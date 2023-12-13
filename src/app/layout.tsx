@@ -29,7 +29,14 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="pt-AO" suppressHydrationWarning suppressContentEditableWarning>
       <body className={`${inter.className}`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
