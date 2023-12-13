@@ -8,6 +8,7 @@ module.exports = {
     './src/**/*.{ts,tsx}',
   ],
   theme: {
+    screens: { desk: '1440px' },
     container: {
       center: true,
       padding: '2rem',
@@ -16,6 +17,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        inter: ['var(--font-inter)'],
+      },
+
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

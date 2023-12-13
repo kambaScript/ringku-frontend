@@ -5,7 +5,11 @@ import { Inter } from 'next/font/google';
 
 import { ThemeProvider } from '@/components/provider/theme-provider';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 const description = '';
 export const metadata: Metadata = {
   title: 'RingKu',
@@ -14,13 +18,13 @@ export const metadata: Metadata = {
     icon: [
       {
         media: '(prefers-color-scheme: light)',
-        url: '/faviconDark.svg',
-        href: '/faviconDark.svg',
+        url: '/flogoDark.svg',
+        href: '/logoDark.svg',
       },
       {
         media: '(prefers-color-scheme: dark)',
-        url: '/faviconDark.svg',
-        href: '/faviconDark.svg',
+        url: '/flogoLight.svg',
+        href: '/logoLight.svg',
       },
     ],
   },
@@ -28,7 +32,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="pt-AO" suppressHydrationWarning suppressContentEditableWarning>
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} bg-[#FFFFFF] dark:bg-zinc-950`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
