@@ -6,6 +6,6 @@ const MarketingPage = () => {
       Ringku <ModeToggle />
     </h1>
   );
-};
+}
 
 export default MarketingPage;
